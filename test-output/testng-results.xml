@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-21T19:34:31 CST" name="Default suite" finished-at="2023-01-21T19:34:37 CST" duration-ms="5861">
+  <suite started-at="2023-01-21T20:07:18 CST" name="Default suite" finished-at="2023-01-21T20:07:24 CST" duration-ms="5684">
     <groups>
     </groups>
-    <test started-at="2023-01-21T19:34:31 CST" name="Default test" finished-at="2023-01-21T19:34:37 CST" duration-ms="5861">
+    <test started-at="2023-01-21T20:07:18 CST" name="Default test" finished-at="2023-01-21T20:07:24 CST" duration-ms="5684">
       <class name="dev.store.testcases.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:dev.store.testcases.LoginTest@1b2abca6]" started-at="2023-01-21T19:34:31 CST" name="setup" finished-at="2023-01-21T19:34:33 CST" duration-ms="2467" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:dev.store.testcases.LoginTest@1b2abca6]" started-at="2023-01-21T20:07:18 CST" name="setup" finished-at="2023-01-21T20:07:20 CST" duration-ms="2400" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:0, instance:dev.store.testcases.LoginTest@1b2abca6]" started-at="2023-01-21T19:34:33 CST" name="login" finished-at="2023-01-21T19:34:37 CST" duration-ms="3348" status="FAIL">
+        <test-method signature="login()[pri:0, instance:dev.store.testcases.LoginTest@1b2abca6]" started-at="2023-01-21T20:07:20 CST" name="login" finished-at="2023-01-21T20:07:24 CST" duration-ms="3239" status="FAIL">
           <exception class="java.lang.UnsupportedOperationException">
             <message>
               <![CDATA[To submit an element, it must be nested inside a form element]]>
@@ -55,7 +55,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:dev.store.testcases.LoginTest@1b2abca6]" started-at="2023-01-21T19:34:37 CST" name="tearDown" finished-at="2023-01-21T19:34:37 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:dev.store.testcases.LoginTest@1b2abca6]" started-at="2023-01-21T20:07:24 CST" name="tearDown" finished-at="2023-01-21T20:07:24 CST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -14,8 +14,8 @@ public class LoginPage {
 	
 	By txtEmail = By.name("email");
 	By txtPassword = By.id("password");
-	By btnLogin = By.xpath("//*[@id=\"loginButton\"]");
-	By lblError = By.id("loginButton");
+	By btnLogin = By.xpath("//*[@id=\"login-form\"]//*[@id=\"loginButton\"]");
+	//By lblError = By.xpath("//*[@id=\"loginButton\"]");
 	//txtEmail.sendKeys(EMAIL);
 	//txtPassword.sendKeys(PASSWORD);
 	//btnLogin.click();
