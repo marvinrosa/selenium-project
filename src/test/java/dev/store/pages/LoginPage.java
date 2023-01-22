@@ -2,7 +2,6 @@ package dev.store.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class LoginPage {
 	
@@ -11,16 +10,12 @@ public class LoginPage {
 
 	//Declaraciones
 	WebDriver driver;
-	
+	By popMsg1 = By.xpath("//*[@id=\"mat-dialog-0\"]/app-welcome-banner/div/div[2]/button[2]");
+	By popMsg2 = By.xpath("/html/body/div[1]/div/a");
 	By txtEmail = By.name("email");
 	By txtPassword = By.id("password");
-	By btnLogin = By.xpath("//*[@id=\"login-form\"]//*[@id=\"loginButton\"]");
-	//By lblError = By.xpath("//*[@id=\"loginButton\"]");
-	//txtEmail.sendKeys(EMAIL);
-	//txtPassword.sendKeys(PASSWORD);
-	//btnLogin.click();
-	//System.out.print(lblError.equals("Invalid email or password."));
-	
+	By btnLogin = By.xpath("//*[@id=\"loginButton\"]");
+
 	//Constructor
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -31,9 +26,14 @@ public class LoginPage {
 		this.driver.get(LOGIN_URL);
 	}
 	
-	public void fillOutForm(String username, String password) {
+	public void popUpRun()  {
+		driver.findElement(popMsg1).click();
+		driver.findElement(popMsg2).click();
+	}
+	
+	public void fillOutForm(String username, String password)  {
 		driver.findElement(txtEmail).sendKeys(username);
 		driver.findElement(txtPassword).sendKeys(password);
-		driver.findElement(btnLogin).submit();
+		driver.findElement(btnLogin).click();
 	}
 }

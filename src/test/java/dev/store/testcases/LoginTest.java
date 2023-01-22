@@ -19,7 +19,9 @@ public class LoginTest extends BaseTest{
 	public void login() {
 		login = new LoginPage(driver);
 		login.getUrl();
+		login.popUpRun();
 		login.fillOutForm(EMAIL, PASSWORD);	
 	}
+	
 
 }
