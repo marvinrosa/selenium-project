@@ -2,38 +2,38 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-21T18:42:15 CST" name="Default suite" finished-at="2023-01-21T18:42:23 CST" duration-ms="7241">
+  <suite started-at="2023-01-21T18:49:57 CST" name="Default suite" finished-at="2023-01-21T18:50:05 CST" duration-ms="7356">
     <groups>
     </groups>
-    <test started-at="2023-01-21T18:42:15 CST" name="Default test" finished-at="2023-01-21T18:42:23 CST" duration-ms="7241">
-      <class name="testcases.Login">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.Login@209da20d]" started-at="2023-01-21T18:42:15 CST" name="setup" finished-at="2023-01-21T18:42:21 CST" duration-ms="5291" status="PASS">
+    <test started-at="2023-01-21T18:49:57 CST" name="Default test" finished-at="2023-01-21T18:50:05 CST" duration-ms="7356">
+      <class name="testcases.Register">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.Register@74751b3]" started-at="2023-01-21T18:49:57 CST" name="setup" finished-at="2023-01-21T18:50:04 CST" duration-ms="6281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:0, instance:testcases.Login@209da20d]" started-at="2023-01-21T18:42:21 CST" name="login" finished-at="2023-01-21T18:42:22 CST" duration-ms="1566" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method signature="register()[pri:0, instance:testcases.Register@74751b3]" started-at="2023-01-21T18:50:04 CST" name="register" finished-at="2023-01-21T18:50:04 CST" duration-ms="669" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[element click intercepted: Element <button _ngcontent-frd-c160="" type="submit" id="loginButton" mat-raised-button="" color="primary" aria-label="Login" class="mat-focus-indicator mat-raised-button mat-button-base mat-primary">...</button> is not clickable at point (869, 421). Other element would receive the click: <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+              <![CDATA[element not interactable
   (Session info: chrome=109.0.5414.75)
 Build info: version: '4.7.2', revision: '4d4020c3b7'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0bdd03bd8e150893bbdb9bec386f3c1e, clickElement {id=8ed0c90d-e214-429c-b251-38e52da6b512}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\marvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52310}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52310/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (0bdd03bd8e150893bbdb9bec386f3c1e)] -> xpath: //*[@id="loginButton"]]
-Session ID: 0bdd03bd8e150893bbdb9bec386f3c1e]]>
+Command: [7e98c9ff2ba647feececf151878bb053, sendKeysToElement {id=d217ebfe-07ef-44b4-836e-382900ab3e3e, value=[Ljava.lang.CharSequence;@dc7b462}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\marvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52388}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52388/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (7e98c9ff2ba647feececf151878bb053)] -> xpath: //*[@id="mat-select-value-1"]]
+Session ID: 7e98c9ff2ba647feececf151878bb053]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button _ngcontent-frd-c160="" type="submit" id="loginButton" mat-raised-button="" color="primary" aria-label="Login" class="mat-focus-indicator mat-raised-button mat-button-base mat-primary">...</button> is not clickable at point (869, 421). Other element would receive the click: <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
   (Session info: chrome=109.0.5414.75)
 Build info: version: '4.7.2', revision: '4d4020c3b7'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0bdd03bd8e150893bbdb9bec386f3c1e, clickElement {id=8ed0c90d-e214-429c-b251-38e52da6b512}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\marvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52310}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52310/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (0bdd03bd8e150893bbdb9bec386f3c1e)] -> xpath: //*[@id="loginButton"]]
-Session ID: 0bdd03bd8e150893bbdb9bec386f3c1e
+Command: [7e98c9ff2ba647feececf151878bb053, sendKeysToElement {id=d217ebfe-07ef-44b4-836e-382900ab3e3e, value=[Ljava.lang.CharSequence;@dc7b462}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\marvi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52388}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52388/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (7e98c9ff2ba647feececf151878bb053)] -> xpath: //*[@id="mat-select-value-1"]]
+Session ID: 7e98c9ff2ba647feececf151878bb053
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -47,8 +47,8 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(Driver
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at testcases.Login.login(Login.java:37)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:113)
+at testcases.Register.register(Register.java:44)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -79,15 +79,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Login@209da20d]" started-at="2023-01-21T18:42:22 CST" name="tearDown" finished-at="2023-01-21T18:42:23 CST" duration-ms="343" status="PASS">
+        </test-method> <!-- register -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Register@74751b3]" started-at="2023-01-21T18:50:04 CST" name="tearDown" finished-at="2023-01-21T18:50:05 CST" duration-ms="355" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcases.Login -->
+      </class> <!-- testcases.Register -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
