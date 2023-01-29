@@ -17,6 +17,7 @@ public class Log {
 		Log.info("--");
 		Log.info("--");
 	}
+	
 	public static void info(String message) {
 		Log.info(message);
 	}
