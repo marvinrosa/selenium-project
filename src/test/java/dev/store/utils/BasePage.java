@@ -40,13 +40,15 @@ public class BasePage {
 	}
 	
 	// click elements
-	public void click(By element) {
-			find(element).click();
+	public void click(WebElement popMsg1) {
+		//find(popMsg1).click();
+		///popMsg1.findElement()
+		popMsg1.click();
 	}
 
 	// sendkeys elements
 	public void type(By element, String text) {
-			find(element).sendKeys(text);
+		find(element).sendKeys(text);
 	}
 	
 	public boolean isDisplayed(By element) {
