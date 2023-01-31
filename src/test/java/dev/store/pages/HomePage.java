@@ -13,17 +13,17 @@ public class HomePage extends BasePage {
 	//By popMsg1 = By.xpath("//*[@id=\"mat-dialog-0\"]/app-welcome-banner/div/div[2]/button[2]");
 	//By popMsg2 = By.xpath("/html/body/div[1]/div/a");
 	
-	@FindBy(xpath="//*[@id=\\\"mat-dialog-0\\\"]/app-welcome-banner/div/div[2]/button[2]")
+	@FindBy(xpath="//*[@id=\"mat-dialog-0\"]/app-welcome-banner/div/div[2]/button[2]")
 	public WebElement popMsg1;
 	
 	@FindBy(xpath="/html/body/div[1]/div/a")
 	public WebElement popMsg2;
 	
-	@FindBy(id="navbarAccount")
-	public WebElement accountLink;
+	@FindBy(css="#navbarAccount > span.mat-button-wrapper > span")
+	public WebElement lnkAccount;
 	
-	@FindBy(id="navbarLoginButton")
-	public WebElement loginLink;
+	@FindBy(css="#navbarLoginButton")
+	public WebElement lnkLogin;
 	
 	@FindBy(css="#searchQuery > span > mat-icon.mat-icon.notranslate.mat-ripple.mat-search_icon-search.ng-tns-c253-1.material-icons.mat-ligature-font.mat-icon-no-color")
 	public WebElement btnSearch;
@@ -41,17 +41,17 @@ public class HomePage extends BasePage {
 	}
 	
 	public void goToSearchButton() {
-		click(accountLink);
+		click(lnkAccount);
 		click(btnSearch);
 	}
 	
 	public void goToAccountLink() {
-		click(accountLink);
+		click(lnkAccount);
 	}
 	
 	public void goToLoginLink() {
-		click(accountLink);
-		click(loginLink);
+		click(lnkAccount);
+		click(lnkLogin);
 	}
 
 }

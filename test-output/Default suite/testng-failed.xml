@@ -7,6 +7,7 @@
         <methods>
           <include name="login"/>
           <include name="tearDown"/>
+          <include name="afterMethod"/>
           <include name="setup"/>
         </methods>
       </class> <!-- dev.store.testcases.LoginTest -->

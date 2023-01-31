@@ -1,39 +1,48 @@
 package dev.store.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+import dev.store.utils.BasePage;
+
+public class LoginPage extends BasePage{
 	
-	//Constantes
-	String LOGIN_URL = "https://juice-shop.herokuapp.com/#/login";
-
 	//Declaraciones
 	WebDriver driver;
-	By popMsg1 = By.xpath("//*[@id=\"mat-dialog-0\"]/app-welcome-banner/div/div[2]/button[2]");
-	By popMsg2 = By.xpath("/html/body/div[1]/div/a");
-	By txtEmail = By.name("email");
-	By txtPassword = By.id("password");
-	By btnLogin = By.xpath("//*[@id=\"loginButton\"]");
 
+	@FindBy(name="email")
+	public WebElement txtEmail;
+	
+	@FindBy(id="password")
+	public WebElement txtPassword; 
+	
+	@FindBy(css="#loginButton > span.mat-button-wrapper")
+	public WebElement btnLogin;
+
+	@FindBy(id="newCustomerLink")
+	public WebElement lnkRegister;
+	
 	//Constructor
 	public LoginPage(WebDriver driver) {
-		this.driver = driver;
-	}
-		
-	//Metodos
-	public void getUrl() {
-		this.driver.get(LOGIN_URL);
+		super(driver);
+		PageFactory.initElements(driver, this);
 	}
 	
-	public void popUpRun()  {
-		driver.findElement(popMsg1).click();
-		driver.findElement(popMsg2).click();
+	public LoginPage(WebDriver driver, int timeOutSec) {
+		super(driver);
+		PageFactory.initElements(driver, this);
+		setTimeOutSec(timeOutSec);
 	}
 	
-	public void fillOutForm(String username, String password)  {
-		driver.findElement(txtEmail).sendKeys(username);
-		driver.findElement(txtPassword).sendKeys(password);
-		driver.findElement(btnLogin).click();
+	public void fillOutLoginForm(String username, String password)  {
+		type(txtEmail,username);
+		type(txtPassword,password);
+		click(btnLogin);
+		//driver.findElement(txtEmail).sendKeys(username);
+		//driver.findElement(txtPassword).sendKeys(password);
+		//driver.findElement(btnLogin).click();
 	}
+	
 }

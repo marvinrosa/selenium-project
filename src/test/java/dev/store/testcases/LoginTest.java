@@ -11,16 +11,12 @@ public class LoginTest extends BaseTest{
 	String EMAIL = "marvin.rosafortin@gmail.com";
 	String PASSWORD = "Owasp@1234";
 	
-	//Instancias
-	LoginPage login;
 	
-	//Testcases
 	@Test
 	public void login() {
-		login = new LoginPage(driver);
-		login.getUrl();
-		login.popUpRun();
-		login.fillOutForm(EMAIL, PASSWORD);	
+		homePage.avoidElements();
+		homePage.goToLoginLink();
+		loginPage.fillOutLoginForm(EMAIL, PASSWORD);
 	}
 	
 

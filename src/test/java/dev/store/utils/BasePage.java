@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
@@ -34,10 +33,10 @@ public class BasePage {
 		driver.get(url);
 	}
 	
-	// find an element
-	public WebElement find(By element) {
-		return driver.findElement(element);
-	}
+	/* find an element
+	public WebElement find(WebElement element) {
+		//return driver.findElement(element);
+	}*/
 	
 	// click elements
 	public void click(WebElement popMsg1) {
@@ -47,10 +46,12 @@ public class BasePage {
 	}
 
 	// sendkeys elements
-	public void type(By element, String text) {
-		find(element).sendKeys(text);
+	public void type(WebElement element, String text) {
+		//find(element).sendKeys(text);
+		element.sendKeys(text);
 	}
 	
+	/*
 	public boolean isDisplayed(By element) {
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(element));
@@ -59,6 +60,6 @@ public class BasePage {
 		}
 		return true;
 
-	}
+	}*/
 
 }
