@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeMethod;
 
 import dev.store.pages.HomePage;
 import dev.store.pages.LoginPage;
+import dev.store.pages.MainPage;
 import dev.store.pages.RegisterPage;
 
 public class BaseTest {
@@ -18,6 +19,7 @@ public class BaseTest {
 	protected HomePage homePage;
 	protected LoginPage loginPage;
 	protected RegisterPage registerPage;
+	protected MainPage mainPage;
 	
 	@BeforeMethod
 	public void setup() {
@@ -30,6 +32,8 @@ public class BaseTest {
 		homePage = new HomePage(driver);
 		loginPage = new LoginPage(driver);
 		registerPage = new RegisterPage(driver);
+		mainPage = new MainPage(driver);
+		
 	}
 	
 	@AfterMethod

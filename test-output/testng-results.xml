@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-02T16:26:01 CST" name="Default suite" finished-at="2023-02-02T16:26:10 CST" duration-ms="9118">
+  <suite started-at="2023-02-02T16:38:51 CST" name="Default suite" finished-at="2023-02-02T16:38:57 CST" duration-ms="5843">
     <groups>
     </groups>
-    <test started-at="2023-02-02T16:26:01 CST" name="Default test" finished-at="2023-02-02T16:26:10 CST" duration-ms="9118">
-      <class name="dev.store.testcases.RegisterTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:dev.store.testcases.RegisterTest@2ed2d9cb]" started-at="2023-02-02T16:26:01 CST" name="setup" finished-at="2023-02-02T16:26:05 CST" duration-ms="4518" status="PASS">
+    <test started-at="2023-02-02T16:38:51 CST" name="Default test" finished-at="2023-02-02T16:38:57 CST" duration-ms="5843">
+      <class name="dev.store.testcases.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:dev.store.testcases.LoginTest@6fd83fc1]" started-at="2023-02-02T16:38:51 CST" name="setup" finished-at="2023-02-02T16:38:56 CST" duration-ms="4763" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="register()[pri:0, instance:dev.store.testcases.RegisterTest@2ed2d9cb]" started-at="2023-02-02T16:26:05 CST" name="register" finished-at="2023-02-02T16:26:10 CST" duration-ms="4529" status="PASS">
+        <test-method signature="login()[pri:0, instance:dev.store.testcases.LoginTest@6fd83fc1]" started-at="2023-02-02T16:38:56 CST" name="login" finished-at="2023-02-02T16:38:57 CST" duration-ms="1039" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- register -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:dev.store.testcases.RegisterTest@2ed2d9cb]" started-at="2023-02-02T16:26:10 CST" name="afterMethod" finished-at="2023-02-02T16:26:10 CST" duration-ms="1" status="PASS">
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:dev.store.testcases.LoginTest@6fd83fc1]" started-at="2023-02-02T16:38:57 CST" name="afterMethod" finished-at="2023-02-02T16:38:57 CST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:dev.store.testcases.RegisterTest@2ed2d9cb]" started-at="2023-02-02T16:26:10 CST" name="tearDown" finished-at="2023-02-02T16:26:10 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:dev.store.testcases.LoginTest@6fd83fc1]" started-at="2023-02-02T16:38:57 CST" name="tearDown" finished-at="2023-02-02T16:38:57 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- dev.store.testcases.RegisterTest -->
+      </class> <!-- dev.store.testcases.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

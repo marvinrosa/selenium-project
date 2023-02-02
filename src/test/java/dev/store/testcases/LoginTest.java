@@ -7,7 +7,7 @@ import dev.store.utils.BaseTest;
 public class LoginTest extends BaseTest{
 
 	//Contantes
-	String EMAIL = "marvin.rosafortin@gmail.com";
+	String EMAIL = "marvin.rosafortin11@gmail.com";
 	String PASSWORD = "Owasp@1234";
 	
 	
