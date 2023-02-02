@@ -18,7 +18,7 @@ public class HomePage extends BasePage {
 	@FindBy(css="#navbarAccount > span.mat-button-wrapper > span")
 	public WebElement lnkAccount;
 	
-	@FindBy(css="#navbarLoginButton")
+	@FindBy(xpath="//*[@id=\"navbarLoginButton\"]")
 	public WebElement lnkLogin;
 	
 	@FindBy(css="#searchQuery > span > mat-icon.mat-icon.notranslate.mat-ripple.mat-search_icon-search.ng-tns-c253-1.material-icons.mat-ligature-font.mat-icon-no-color")

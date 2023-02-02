@@ -48,14 +48,11 @@ public class RegisterPage extends BasePage {
 		super(driver);
 		PageFactory.initElements(driver, this);
 		setTimeOutSec(timeOutSec);
-		System.out.println(timeOutSec);
 	}
 	
 	public void goToRegisterLink() {
 		setTimeOutSec(2000);
 		visit("http://localhost:3000/#/register");
-		//click(lnkToRegister);
-		log.info("Hola mundo");
 	}
 	
 	public void fillOutRegisterForm(String username, String password,String answerQuestion){

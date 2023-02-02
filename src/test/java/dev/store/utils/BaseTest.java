@@ -23,7 +23,7 @@ public class BaseTest {
 	public void setup() {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("http://localhost:3000");
 		
 		//
