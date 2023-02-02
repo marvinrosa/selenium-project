@@ -8,10 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import dev.store.utils.BasePage;
 
 public class HomePage extends BasePage {
-
-	
-	//By popMsg1 = By.xpath("//*[@id=\"mat-dialog-0\"]/app-welcome-banner/div/div[2]/button[2]");
-	//By popMsg2 = By.xpath("/html/body/div[1]/div/a");
 	
 	@FindBy(xpath="//*[@id=\"mat-dialog-0\"]/app-welcome-banner/div/div[2]/button[2]")
 	public WebElement popMsg1;

@@ -40,9 +40,6 @@ public class LoginPage extends BasePage{
 		type(txtEmail,username);
 		type(txtPassword,password);
 		click(btnLogin);
-		//driver.findElement(txtEmail).sendKeys(username);
-		//driver.findElement(txtPassword).sendKeys(password);
-		//driver.findElement(btnLogin).click();
 	}
 	
 }

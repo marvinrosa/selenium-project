@@ -2,7 +2,6 @@ package dev.store.testcases;
 
 import org.testng.annotations.Test;
 
-import dev.store.pages.LoginPage;
 import dev.store.utils.BaseTest;
 
 public class LoginTest extends BaseTest{

@@ -1,30 +1,83 @@
 package dev.store.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class RegisterPage {
-	//Constantes
-	String LOGIN_URL = "https://juice-shop.herokuapp.com/#/login";
+import dev.store.log.Log;
+import dev.store.utils.BasePage;
 
+public class RegisterPage extends BasePage {
+	
 	//Declaraciones
 	WebDriver driver;
-	By popMsg1 = By.xpath("//*[@id=\"mat-dialog-0\"]/app-welcome-banner/div/div[2]/button[2]");
-	By popMsg2 = By.xpath("/html/body/div[1]/div/a");
-	By txtEmail = By.xpath("//*[@id=\"emailControl\"]");
-	By txtPassword = By.xpath("//*[@id=\"passwordControl\"]");
-	By txtRepeatPassword = By.xpath("//*[@id=\"repeatPasswordControl\"]");
-	By btnRegister = By.xpath("//*[@id=\"registerButton\"]/span[1]");
-	By cmbQuestion = By.xpath("//*[@id=\"mat-select-value-1\"]");
-	By txtSecurityQuestion = By.xpath("//*[@id=\"securityAnswerControl\"]");
+	Log log = new Log();
+	@FindBy(xpath="/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/app-login/div/mat-card/div/div[2]/a")
+	public WebElement lnkToRegister;
 	
-	/*email.sendKeys(EMAIL);
-	password.sendKeys(PASSWORD);
-	repeatPassword.sendKeys(PASSWORD);
-	selectQuestion.sendKeys(SELECT_ELEMENT);
-	answerQuestion.sendKeys(SECURITY_ANSWER);
-	registerButton.click();
-	*/
+	@FindBy(xpath="//*[@id=\"emailControl\"]")
+	public WebElement txtEmail;
+	
+	@FindBy(xpath="//*[@id=\"passwordControl\"]")
+	public WebElement txtPassword;
+	
+	@FindBy(xpath="//*[@id=\"repeatPasswordControl\"]")
+	public WebElement txtRepeatPassword;
+	
+	// validate
+	@FindBy(css="#registration-form > div.security-container > mat-form-field.mat-form-field.ng-tns-c118-14.mat-accent.mat-form-field-type-mat-select.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-has-label.mat-form-field-hide-placeholder.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted > div > div.mat-form-field-flex.ng-tns-c118-14 > div.mat-form-field-infix.ng-tns-c118-14")
+	public WebElement cmbQuestion;
+	//validate
+	@FindBy(xpath="//*[@id=\"mat-option-3\"]")
+	public WebElement cmbOption;
+	
+	@FindBy(xpath="//*[@id=\"securityAnswerControl\"]")
+	public WebElement txtSecurityQuestion;
+	
+	@FindBy(xpath="//*[@id=\"registerButton\"]/span[1]")
+	public WebElement btnRegister;
+	
+	//Constructor
+	public RegisterPage(WebDriver driver) {
+		super(driver);
+		PageFactory.initElements(driver, this);
+   }
+	
+	public RegisterPage(WebDriver driver, int timeOutSec) {
+		super(driver);
+		PageFactory.initElements(driver, this);
+		setTimeOutSec(timeOutSec);
+		System.out.println(timeOutSec);
+	}
+	
+	public void goToRegisterLink() {
+		setTimeOutSec(2000);
+		visit("http://localhost:3000/#/register");
+		//click(lnkToRegister);
+		log.info("Hola mundo");
+	}
+	
+	public void fillOutRegisterForm(String username, String password,String answerQuestion){
+		//setTimeOutSec(2000);
+		type(txtEmail,username);
+		type(txtPassword,password);
+		type(txtRepeatPassword,password);
+		sleep(3000); // re validate
+		click(cmbQuestion);
+		click(cmbOption);
+		type(txtSecurityQuestion,answerQuestion);
+		click(btnRegister);
+	}
+	
+	
+	private void sleep(int timeOutSec) {
+		try {
+			Thread.sleep(timeOutSec);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 		
 }
