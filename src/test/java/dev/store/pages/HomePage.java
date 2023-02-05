@@ -9,6 +9,8 @@ import dev.store.utils.BasePage;
 
 public class HomePage extends BasePage {
 	
+	//Declaraciones
+	WebDriver driver;
 	@FindBy(xpath="//*[@id=\"mat-dialog-0\"]/app-welcome-banner/div/div[2]/button[2]")
 	public WebElement popMsg1;
 	
