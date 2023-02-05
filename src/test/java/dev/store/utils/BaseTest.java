@@ -12,6 +12,7 @@ import dev.store.pages.AddressPage;
 import dev.store.pages.HomePage;
 import dev.store.pages.LoginPage;
 import dev.store.pages.MainPage;
+import dev.store.pages.PaymentPage;
 import dev.store.pages.RegisterPage;
 
 public class BaseTest {
@@ -22,6 +23,7 @@ public class BaseTest {
 	protected RegisterPage registerPage;
 	protected MainPage mainPage;
 	protected AddressPage addressPage;
+	protected PaymentPage paymentPage;
 	
 	@BeforeMethod
 	public void setup() {
@@ -36,6 +38,7 @@ public class BaseTest {
 		registerPage = new RegisterPage(driver);
 		mainPage = new MainPage(driver);
 		addressPage = new AddressPage(driver);
+		paymentPage = new PaymentPage(driver);
 		
 		
 	}

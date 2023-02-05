@@ -13,7 +13,8 @@ public class AddressTest extends BaseTest{
 	String ADDRESS = "AV";
 	String CITY ="San Salvador";
 	String STATE ="Soyapango";
-	@Test
+	
+	@Test(dependsOnMethods = {"login"})
 	public void addNewAddress() throws InterruptedException {
 		homePage.avoidElements();
 		homePage.goToAccountLink();
