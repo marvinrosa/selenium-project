@@ -1,0 +1,12 @@
+<suite name="AllTests" verbose="1" >
+  <test name="RegisterTest">
+    <classes>
+      <class name="dev.store.testcases.RegisterTest"/>
+    </classes>
+  </test>
+  <test name="LoginTest" >
+    <classes>
+       <class name="dev.store.testcases.LoginTest" />
+    </classes>
+  </test>
+</suite>
