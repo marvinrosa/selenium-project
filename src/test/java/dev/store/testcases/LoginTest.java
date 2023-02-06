@@ -8,14 +8,19 @@ public class LoginTest extends BaseTest{
 
 	//Contantes
 	String EMAIL = "marvin.rosafortin11@gmail.com";
-	String PASSWORD = "Owasp@1234";
+	String PASSWORD = "Owasp@12341";
 	
 	
 	@Test(priority=1)
-	public void login() throws InterruptedException {
+	public void correctLogin() throws InterruptedException {
 		homePage.goToLoginLink();
 		loginPage.fillOutLoginForm(EMAIL, PASSWORD);
 	}
 	
-
+	@Test(priority=2, enabled = true)
+	public void incorrectLogin() throws InterruptedException {
+		homePage.goToLoginLink();
+		loginPage.fillOutLoginForm(EMAIL, PASSWORD);
+		loginPage.verifyIncorrectLogin("Invalid email or password.", "");
+	}
 }

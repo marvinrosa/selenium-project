@@ -4,9 +4,20 @@
       <class name="dev.store.testcases.RegisterTest"/>
     </classes>
   </test>
-  <test name="LoginTest" >
+  <test name="IncorrectLoginTest" >
     <classes>
        <class name="dev.store.testcases.LoginTest" />
+       <methods>
+			<include name="incorrectLogin"></include>
+		</methods>
+    </classes>
+  </test>
+  <test name="CorrectLoginTest" >
+    <classes>
+       <class name="dev.store.testcases.LoginTest" />
+       	 <methods>
+			<include name="correctLogin"></include>
+		</methods>
     </classes>
   </test>
 </suite>
