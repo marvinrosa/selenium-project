@@ -11,9 +11,8 @@ public class LoginTest extends BaseTest{
 	String PASSWORD = "Owasp@1234";
 	
 	
-	@Test
-	public void login() {
-		homePage.avoidElements();
+	@Test(priority=1)
+	public void login() throws InterruptedException {
 		homePage.goToLoginLink();
 		loginPage.fillOutLoginForm(EMAIL, PASSWORD);
 	}

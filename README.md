@@ -5,3 +5,15 @@ Working with test automation using WebDriver for UI Testing, will increase a new
 
 -- URL
 https://juice-shop.herokuapp.com/#/
+
+
+
+# Docker
+
+### Commands to execute
+* docker pull bkimminich/juice-shop
+* docker run --rm -p 3000:3000 bkimminich/juice-shop
+
+Run locally
+# URL
+http://localhost:3000/#/

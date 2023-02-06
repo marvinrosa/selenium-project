@@ -12,7 +12,7 @@ public class RegisterTest extends BaseTest{
 	
 	@Test
 	public void register() {
-		homePage.avoidElements();
+		homePage.goToLoginLink();
 		registerPage.goToRegisterLink();
 		registerPage.fillOutRegisterForm(EMAIL, PASSWORD, SECURITY_ANSWER);
 	}

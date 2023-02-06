@@ -26,7 +26,8 @@ public class RegisterPage extends BasePage {
 	public WebElement txtRepeatPassword;
 	
 	// validate
-	@FindBy(css="#registration-form > div.security-container > mat-form-field.mat-form-field.ng-tns-c118-14.mat-accent.mat-form-field-type-mat-select.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-has-label.mat-form-field-hide-placeholder.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted > div > div.mat-form-field-flex.ng-tns-c118-14 > div.mat-form-field-infix.ng-tns-c118-14")
+	//@FindBy(css="#registration-form > div.security-container > mat-form-field.mat-form-field.ng-tns-c118-14.mat-accent.mat-form-field-type-mat-select.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-has-label.mat-form-field-hide-placeholder.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted > div > div.mat-form-field-flex.ng-tns-c118-14 > div.mat-form-field-infix.ng-tns-c118-14")
+	@FindBy(xpath="//div[@id='mat-select-value-3']/span")
 	public WebElement cmbQuestion;
 	//validate
 	@FindBy(xpath="//*[@id=\"mat-option-3\"]")
@@ -51,8 +52,7 @@ public class RegisterPage extends BasePage {
 	}
 	
 	public void goToRegisterLink() {
-		setTimeOutSec(2000);
-		visit("http://localhost:3000/#/register");
+		click(lnkToRegister);
 	}
 	
 	public void fillOutRegisterForm(String username, String password,String answerQuestion){
@@ -60,7 +60,7 @@ public class RegisterPage extends BasePage {
 		type(txtEmail,username);
 		type(txtPassword,password);
 		type(txtRepeatPassword,password);
-		sleep(3000); // re validate
+		sleep(1000); // re validate
 		click(cmbQuestion);
 		click(cmbOption);
 		type(txtSecurityQuestion,answerQuestion);

@@ -7,8 +7,8 @@
         <methods>
           <include name="register"/>
           <include name="tearDown"/>
-          <include name="setup"/>
           <include name="afterMethod"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- dev.store.testcases.RegisterTest -->
     </classes>

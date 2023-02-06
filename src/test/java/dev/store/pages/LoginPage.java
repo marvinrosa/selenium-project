@@ -34,6 +34,7 @@ public class LoginPage extends BasePage{
 		super(driver);
 		PageFactory.initElements(driver, this);
 		setTimeOutSec(timeOutSec);
+		
 	}
 	
 	public void fillOutLoginForm(String username, String password)  {
