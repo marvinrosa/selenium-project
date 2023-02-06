@@ -21,6 +21,6 @@ public class LoginTest extends BaseTest{
 	public void incorrectLogin() throws InterruptedException {
 		homePage.goToLoginLink();
 		loginPage.fillOutLoginForm(EMAIL, PASSWORD);
-		loginPage.verifyIncorrectLogin("Invalid email or password.", "");
+		loginPage.verifyIncorrectLogin("Invalid email or password.");
 	}
 }

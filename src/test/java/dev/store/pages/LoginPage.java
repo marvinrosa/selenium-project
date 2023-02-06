@@ -47,8 +47,8 @@ public class LoginPage extends BasePage{
 		click(btnLogin);
 	}
 	
-	public void verifyIncorrectLogin(String currentMessage,String expectedSuccessMessage) {
-		Assert.assertTrue(currentMessage.contains(expectedSuccessMessage), "the login was not successfull");
+	public void verifyIncorrectLogin(String expectedSuccessMessage) {
+		Assert.assertTrue(lblErrorMessage.getText().contains(expectedSuccessMessage), "the login was not successfull");
 	}
 	
 }
